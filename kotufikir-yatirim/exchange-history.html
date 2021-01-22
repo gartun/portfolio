@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kur Verileri | Kötüfikir Yatırım</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .warnme {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 1.5rem;
+            opacity: 0;
+            z-index: 3;
+            visibility: hidden;
+            transition: opacity .5s, visibility .5s;
+        }
+        
+        .closewarnme {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            cursor: pointer;
+            font-weight: 900;
+            font-size: 2.3rem;
+        }
+        
+        .closewarnme:hover {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-primary">
+            <div class="container">
+                <a href="./index.html" class="navbar-brand">Kötüfikir Yatırım</a>
+            </div>
+        </nav>
+    </header>
+    <div class="warnme">Arama kriterlerine uygun veri bulunamadı. <span class="closewarnme">&times;</span></div>
+    <main>
+        <div class="container main-container">
+            <form class="border border-primary rounded mt-3 mb-2">
+                <div class="container">
+                    <div class="form-group">
+                        <label for="baseCurrency">Baz alınacak para birimi:</label>
+                        <select class="form-control" id="baseCurrency">
+      <option>TRY</option>
+      <option>USD</option>
+      <option>GBP</option>
+      <option>CHF</option>
+    </select>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Tarih(1999'dan itibaren):</label>
+                        <input type="date" id="date" class="form-control">
+                    </div>
+                    <button type="button" class="btn btn-dark btn-block my-2" id="go">Verileri Getir</button>
+                </div>
+            </form>
+            <div id="results" class="mb-3"></div>
+        </div>
+    </main>
+    <script>
+        document.querySelector("#go").addEventListener("click", () => {
+
+            const baseCur = document.querySelector("#baseCurrency").value;
+            const targetDate = document.querySelector("#date").value || "latest";
+            if (+targetDate.slice(0, 4) >= 1999 || targetDate === "latest") {
+                bringData(baseCur, targetDate);
+            } else {
+                const alertDiv = document.createElement("div");
+                alertDiv.className = "alert alert-danger mt-2";
+                alertDiv.textContent = "1999 öncesi bilgilere erişim yok! Lütfen bu tarihten sonrası için araştırma yapınız...";
+                const mainContainer = document.querySelector(".main-container");
+                const form = document.querySelector("form");
+                mainContainer.insertBefore(alertDiv, form);
+                setTimeout(() => {
+                    alertDiv.remove();
+                }, 5000);
+            }
+        });
+
+        function showdatatry(data) {
+          const newDate = new Date(data.date);
+          const formattedDate = Intl.DateTimeFormat("tr-TR",{weekday: "long", month:'long', year:"numeric", day:'numeric'}).format(newDate);
+            document.querySelector("#results").innerHTML = `<div class="card">
+  <div class="card-header">
+    ${window.Intl ? formattedDate : data.date} tarihli veriler
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">1 Euro = ${Math.round(((1/data.rates.EUR) + Number.EPSILON) * 100) / 100} ₺</li>
+    <li class="list-group-item">1 Dolar = ${Math.round(((1/data.rates.USD) + Number.EPSILON) * 100) / 100} ₺</li>
+    <li class="list-group-item">1 Sterlin = ${Math.round(((1/data.rates.GBP) + Number.EPSILON) * 100) / 100} ₺</li>
+    <li class="list-group-item">1 İsviçre Frangı = ${Math.round(((1/data.rates.CHF) + Number.EPSILON) * 100) / 100} ₺</li>
+  </ul>
+</div>`
+        }
+
+        function showdata(data) {
+            document.querySelector("#results").innerHTML = `<div class="card">
+  <div class="card-header">
+    ${data.date} tarihli veriler
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">1 ${data.base} = ${Math.round((data.rates.EUR + Number.EPSILON) * 100) / 100} Euro</li>
+    <li class="list-group-item">1 ${data.base} = ${Math.round((data.rates.USD + Number.EPSILON) * 100) / 100} Dolar</li>
+    <li class="list-group-item">1 ${data.base} = ${Math.round((data.rates.GBP + Number.EPSILON) * 100) / 100} Sterlin</li>
+    <li class="list-group-item">1 ${data.base} = ${Math.round((data.rates.CHF + Number.EPSILON) * 100) / 100} İsviçre Frangı</li>
+    <li class="list-group-item">1 ${data.base} = ${Math.round((data.rates.TRY + Number.EPSILON) * 100) / 100} Türk Lirası</li>
+  </ul>
+</div>`
+        }
+
+        function bringData(baseCur, targetDate) {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        const data = JSON.parse(xhr.responseText);
+                        switch (data.base) {
+                            case 'TRY':
+                                showdatatry(data);
+                                break;
+
+                            default:
+                                showdata(data);
+                                break;
+                        }
+
+                    }
+                    if (xhr.status === 400 || xhr.status === 404) {
+                        document.querySelector(".warnme").style.opacity = "1";
+                        document.querySelector(".warnme").style.visibility = "visible";
+                    }
+                }
+            };
+            xhr.onloadstart = () => {
+                document.querySelector("#go").innerText = "Bekleyin..."
+            }
+            xhr.onloadend = () => {
+                document.querySelector("#go").innerText = "Verileri Getir"
+            }
+            xhr.open("get", `https://api.exchangeratesapi.io/${targetDate}?base=${baseCur}&symbols=USD,EUR,GBP,TRY,CHF`, true);
+            xhr.send();
+        }
+        document.querySelector(".closewarnme").addEventListener("click", () => {
+            document.querySelector(".warnme").style.opacity = "0";
+            document.querySelector(".warnme").style.visibility = "hidden";
+        })
+    </script>
+</body>
+
+</html>

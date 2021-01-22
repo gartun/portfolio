@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Döviz piyasası hakkında öğrenmek istediğiniz her şey; Dolardaki trend, Euro'nun Dolar'a karşı üstünlüğü, kurdaki dalgalanmalar ve daha nice bilgiler burada">
+    <title>Kötüfikir Yatırım | Döviz Piyasası</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/stock-market.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="stock-slide">
+        <p class="stock-slide-title">Hisse Senetleri</p>
+        <div class="stock-prices">
+
+        </div>
+    </div>
+    <header>
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <span class="logo">KY</span>
+            </a>
+            <div class="logo-name">Kötüfikir Yatırım</div>
+        </div>
+        <div>
+            <div class="menu-btn-wrapper">
+                <div class="menu-btn"></div>
+            </div>
+            <nav>
+                <ul class="navul">
+                    <li class="navlist"><a href="stock-market.html" class="navlink">Borsa Günlüğü <i class="material-icons">assessment</i></a></li>
+                    <li class="navlist"><a href="exchange.html" class="navlink" id="active">Döviz Piyasası <i class="material-icons">attach_money</i></a></li>
+                    <li class="navlist"><a href="bonds.html" class="navlink">Bonolar-Tahviller <i class="material-icons">payments</i></a></li>
+                    <li class="navlist"><a href="exchange-history.html" class="navlink">Kur Verileri </a></li>
+                    <li class="navlist"><a href="../index.html" class="navlink">Proje Sayfasına Dön </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <canvas id="map"></canvas>
+    <a href="#" id="to-top-btn">&uparrow;</a>
+    <div class="fix-stock"></div>
+    <div class="newsletter">
+        <h2>Bildirimlerimizi Alın</h2>
+        <input type="email" name="email" id="email" placeholder="Email adresiniz...">
+        <button>Kayıt Ol</button>
+    </div>
+    <main>
+
+        <article>
+            <h1 class="main-title">Döviz Piyasası</h1>
+            <h3 class="content-links-title">İçerik</h3>
+            <div class="content-links">
+                <ol class="content-ol">
+                    <li class="content-ol__li"><a href="#bests" class="content-ol__li__link">Dolar Nereye Kadar Artacak</a></li>
+                    <li class="content-ol__li"><a href="#worsts" class="content-ol__li__link">Euro/Dolar Paritesine Bakış</a></li>
+                    <li class="content-ol__li"><a href="#estimates" class="content-ol__li__link">Yen'deki silkelenme</a></li>
+                    <li class="content-ol__li"><a href="#overview" class="content-ol__li__link">Türk Lirasının Devalüasyonu</a></li>
+                    <li class="content-ol__li"><a href="#fed" class="content-ol__li__link">FED Kararlarının Yorumu</a></li>
+                </ol>
+            </div>
+            <section class="article-section" id="bests">
+                <h3 class="article-section__title">Dolar Nereye Kadar Artacak</h3>
+                <p class="article-section__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam nisi recusandae alias temporibus. Consequatur nobis commodi similique hic recusandae cupiditate, temporibus ab eaque dolores corporis, corrupti placeat. Doloribus assumenda
+                    amet nihil voluptatum, quae doloremque? Aut ex id, facilis ipsam officia eveniet adipisci odio vel ullam ratione, sapiente explicabo minus pariatur possimus? Ut, nemo iure odio accusamus, modi dignissimos obcaecati nostrum consequatur,
+                    voluptate sunt aliquam blanditiis repudiandae veritatis quae. Nulla, sit eos. Officiis ipsam quos, aliquid officia amet harum delectus?</p>
+            </section>
+            <section class="article-section" id="worsts">
+                <h3 class="article-section__title">Euro/Dolar Paritesine Bakış</h3>
+                <p class="article-section__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam nisi recusandae alias temporibus. Consequatur nobis commodi similique hic recusandae cupiditate, temporibus ab eaque dolores corporis, corrupti placeat. Doloribus assumenda
+                    amet nihil voluptatum, quae doloremque? Aut ex id, facilis ipsam officia eveniet adipisci odio vel ullam ratione, sapiente explicabo minus pariatur possimus? Ut, nemo iure odio accusamus, modi dignissimos obcaecati nostrum consequatur,
+                    voluptate sunt aliquam blanditiis repudiandae veritatis quae. Nulla, sit eos. Officiis ipsam quos, aliquid officia amet harum delectus?</p>
+            </section>
+            <section class="artice-section" id="estimates">
+                <h3 class="article-section__title">Yen'deki silkelenme</h3>
+                <p class="article-section__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illo fugit molestiae excepturi itaque est quis accusamus ut. Repudiandae harum dignissimos eum illum. Cupiditate maxime explicabo suscipit vel tenetur eaque minima, cumque
+                    qui laboriosam est vero unde nesciunt voluptatem eligendi tempora aliquid velit omnis dolorem. Veritatis voluptatem fuga magnam facere autem beatae voluptatibus quos, aliquam architecto corrupti totam quas, repudiandae nam similique
+                    sequi! Impedit laborum fugit dolores pariatur dolorem autem! Distinctio, rerum expedita. Similique doloremque, praesentium dolorum ipsam quam sed at aspernatur perspiciatis repudiandae soluta! Quia, molestiae natus? Distinctio minima
+                    nemo qui in, accusamus ullam culpa illum aliquam animi, vitae, natus mollitia.</p>
+            </section>
+            <section class="artice-section" id="overview">
+                <h3 class="article-section__title">Türk Lirasının Devalüasyonu</h3>
+                <p class="article-section__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae velit repellat, nulla necessitatibus excepturi harum aliquid accusamus accusantium, eveniet officia praesentium eos ab sequi? Veritatis doloribus reprehenderit illo provident
+                    ducimus, non dolor et voluptatibus nulla ad dicta, ipsum temporibus ea voluptates tempore maiores iste consequuntur voluptatem minima optio! Eos, quibusdam iure voluptate architecto voluptates nemo eligendi, repellendus perferendis
+                    ex mollitia corporis debitis natus consequatur! Minus, molestiae. Repellendus eos quisquam pariatur, dolore excepturi libero nisi blanditiis repudiandae aspernatur fugiat voluptatum ea. Unde tenetur laudantium ullam facere alias aperiam
+                    veniam est at eaque ad minus hic, iste suscipit cupiditate, exercitationem facilis tempore nesciunt, vel earum. Ea praesentium natus vero odit sunt unde cumque aliquid exercitationem dolor aliquam rem qui aspernatur fugiat, adipisci
+                    eos debitis neque deleniti quae veniam dolorum libero rerum. Veritatis, atque libero officia facere aliquid labore ad ea doloribus, nostrum perferendis placeat voluptatum. Aliquid, nisi. Vitae earum laborum dolore aut iste molestiae
+                    est eos quisquam quia doloremque? Ut perferendis officiis, modi commodi, cupiditate, odio minima suscipit quis magni tenetur et fugiat necessitatibus? Earum odio saepe autem. Praesentium quisquam, porro odit corporis doloremque corrupti.
+                    Natus, modi quae. Exercitationem accusamus eum veritatis vel, quia autem alias optio totam suscipit necessitatibus fuga magni sed explicabo enim iure delectus voluptate magnam tempora, ab hic! Similique, exercitationem? Perspiciatis
+                    reprehenderit, soluta incidunt dolorem repellat molestias animi atque molestiae nesciunt, vel autem earum cumque dignissimos placeat ad fuga ratione labore explicabo eius doloribus! Similique quos ea tempora cumque repudiandae dignissimos
+                    iusto nobis quasi odit expedita. Mollitia, expedita!</p>
+            </section>
+            <section class="article-section" id="fed">
+                <h3 class="article-section__title">FED Kararlarının Yorumu</h3>
+                <p class="article-section__paragraph">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, sit, omnis fuga consequuntur veritatis quam assumenda, adipisci quos quisquam at facere quas provident nulla. Aut nemo aliquam veniam vitae, quae nihil voluptatibus delectus. Asperiores,
+                    optio, amet minus soluta iste laborum totam dicta quos tenetur quisquam maiores. Rerum, aliquam molestias assumenda quasi cupiditate autem odit maiores voluptatem a molestiae. Labore, eligendi. Exercitationem perspiciatis fuga doloribus
+                    aliquid laborum, harum ab soluta eius nisi earum consequuntur, doloremque magnam fugiat odit porro saepe totam reiciendis! Error nobis illo, fugit est necessitatibus repellendus beatae libero! Animi nesciunt dolor praesentium. Lorem
+                    ipsum dolor sit amet consectetur, adipisicing elit. Impedit saepe nulla repellat corporis? Similique expedita, consequatur quam, aut totam eos vitae unde itaque odit facere quibusdam voluptatum fugit tempora nam ab corporis pariatur
+                    necessitatibus. Explicabo rem ratione nisi cumque perferendis saepe. Aliquam magnam obcaecati nemo, harum voluptate deserunt voluptatem odit provident nobis, pariatur, autem corrupti necessitatibus recusandae aspernatur at! Corporis
+                    ea libero dicta quidem eius laborum assumenda esse porro voluptate tempore expedita eos, quae quisquam consectetur cum quaerat? Alias dicta itaque sequi. Mollitia animi consectetur possimus, eligendi deserunt architecto error dolores.
+                    Provident exercitationem consequuntur, molestias explicabo eum obcaecati omnis magnam accusantium officiis velit dolorum dolor molestiae sunt. Nemo error illo perferendis quas fuga rerum adipisci modi minus. Provident, beatae! Odit
+                    necessitatibus quo harum delectus officia ipsam impedit quibusdam, vel iure minima beatae doloremque ipsa sint exercitationem ducimus similique asperiores facere.
+                </p>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <div class="content-column-container">
+                <div class="content-column">
+                    <h2 class="content-column__title">Kurumsal</h2>
+                    <ul class="content-column__ul">
+                        <li class="content-column__li">Organizasyon Şeması</li>
+                        <li class="content-column__li">Tarihçemiz </li>
+                        <li class="content-column__li">Kurucumuz</li>
+                    </ul>
+                </div>
+                <div class="content-column">
+                    <h2 class="content-column__title">Danışmanlık</h2>
+                    <ul class="content-column__ul">
+                        <li class="content-column__li">Borsa</li>
+                        <li class="content-column__li">Döviz Piyasası </li>
+                        <li class="content-column__li">Mevduat Hesapları</li>
+                        <li class="content-column__li">Bonolar-Tahviller</li>
+                    </ul>
+                </div>
+                <div class="content-column">
+                    <h2 class="content-column__title">İletişim</h2>
+                    <ul class="content-column__ul">
+                        <li class="content-column__li">E-mail</li>
+                        <li class="content-column__li">Telefon </li>
+                        <li class="content-column__li">Adres</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p><span id="year"></span> - &copy;Tüm Hakları Kötüfikir Yatırım'a aittir</p>
+    </footer>
+
+    <script src="./js/jquery.marquee.js"></script>
+    <script src="./js/pagemap.min.js"></script>
+    <script src="js/stocks.js"></script>
+    <script src="js/stock-market.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // hisse senetleri sergisi
+            $(".stock-prices").marquee({
+                // duplicated: true,
+                // gap: 10,
+                delayBeforeStart: 1000,
+                pauseOnHover: true,
+                duration: 15000,
+            });
+
+            // header kısmını sabitlemek
+            $("header").wrap("<div class='header-placeholder'></div>");
+            $(".header-placeholder").height($("header").outerHeight(true));
+            const headeroff = $("header").offset().top;
+
+            $(window).scroll(function() {
+
+                const winPos = $(this).scrollTop();
+                if (winPos > headeroff) {
+                    $("header").addClass("fixed");
+                    $(".logo").addClass("logo-font");
+                    $(".logo-name").addClass("logo-name-font");
+                    $(".menu-btn-wrapper").css({
+                        "height": "25px",
+                        "width": "25px"
+                    });
+                } else {
+                    $(".logo").removeClass("logo-font");
+                    $(".logo-name").removeClass("logo-name-font");
+                    $(".menu-btn-wrapper").css({
+                        "height": "33px",
+                        "width": "33px"
+                    });
+                    $("header").removeClass("fixed");
+
+                }
+                const winBot = winPos + $(window).height();
+                if (winBot > 1060) {
+                    $("#to-top-btn").fadeIn(300);
+                    $(".fix-stock").css({
+                        "opacity": "1",
+                        "visibility": "visible"
+                    });
+                    $(".newsletter").css({
+                        "opacity": "1",
+                        "visibility": "visible"
+                    });
+                } else {
+                    $("#to-top-btn").fadeOut(300);
+                    $(".fix-stock").css({
+                        "opacity": "0",
+                        "visibility": "hidden"
+                    });
+                    $(".newsletter").css({
+                        "opacity": "0",
+                        "visibility": "hidden"
+                    });
+                }
+            });
+
+            $(".content-ol a").on("click", function(e) {
+                e.preventDefault();
+
+                const hash = this.hash;
+
+                if (hash !== "") {
+                    $("html, body").animate({
+                        scrollTop: $(hash).offset().top - $("header").outerHeight()
+                    }, 1300);
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

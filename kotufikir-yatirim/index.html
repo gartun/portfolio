@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Kaldıran Yatırım ile birlikte yatırım piyasaları ve yatırım araçları konusunda uzmanlaşın. Borsa hakkında öğrenmek istediğiniz her şey burada...">
+    <title>Kötüfikir Yatırım | Hoş Geldiniz</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="stock-slide">
+        <p class="stock-slide-title">Hisse Senetleri</p>
+        <div class="stock-prices">
+
+        </div>
+    </div>
+    <header>
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <span class="logo">KY</span>
+            </a>
+            <div class="logo-name">Kötüfikir Yatırım</div>
+        </div>
+        <div>
+            <div class="menu-btn-wrapper">
+                <div class="menu-btn"></div>
+            </div>
+            <nav>
+                <ul class="navul">
+                    <li class="navlist"><a href="stock-market.html" class="navlink">Borsa Günlüğü <i class="material-icons">assessment</i></a></li>
+                    <li class="navlist"><a href="exchange.html" class="navlink">Döviz Piyasası <i class="material-icons">attach_money</i></a></li>
+                    <li class="navlist"><a href="bonds.html" class="navlink">Bonolar-Tahviller <i class="material-icons">payments</i></a></li>
+                    <li class="navlist"><a href="exchange-history.html" class="navlink">Kur Verileri </a></li>
+                    <li class="navlist"><a href="../index.html" class="navlink">Proje Sayfasına Dön </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container">
+            <h2>Ekonomide, bilgi ve tecrübe kazanç demektir.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita iure nulla animi, dolorum eius molestiae nobis laborum reiciendis, totam perspiciatis vel voluptatibus adipisci cupiditate corrupti!</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h2>Paranızı nereye yatırmanız gerektiğini öğrenin.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita iure nulla animi, dolorum eius molestiae nobis laborum reiciendis, totam perspiciatis vel voluptatibus adipisci cupiditate corrupti!</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h2>Kötüfikir Yatırım olarak harika fikirlere sahibiz.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita iure nulla animi, dolorum eius molestiae nobis laborum reiciendis, totam perspiciatis vel voluptatibus adipisci cupiditate corrupti!</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-section">
+            <div class="content-column-container">
+                <div class="content-column">
+                    <h2 class="content-column__title">Kurumsal</h2>
+                    <ul class="content-column__ul">
+                        <li class="content-column__li">Organizasyon Şeması</li>
+                        <li class="content-column__li">Tarihçemiz </li>
+                        <li class="content-column__li">Kurucumuz</li>
+                    </ul>
+                </div>
+                <div class="content-column">
+                    <h2 class="content-column__title">Danışmanlık</h2>
+                    <ul class="content-column__ul">
+                        <li class="content-column__li">Borsa</li>
+                        <li class="content-column__li">Döviz Piyasası </li>
+                        <li class="content-column__li">Mevduat Hesapları</li>
+                        <li class="content-column__li">Bonolar-Tahviller</li>
+                    </ul>
+                </div>
+                <div class="content-column">
+                    <h2 class="content-column__title">İletişim</h2>
+                    <ul class="content-column__ul">
+                        <li class="content-column__li">E-mail</li>
+                        <li class="content-column__li">Telefon </li>
+                        <li class="content-column__li">Adres</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p><span id="year"></span> - &copy;Tüm Hakları Kötüfikir Yatırım'a aittir</p>
+    </footer>
+
+    <script src="./js/jquery.marquee.js"></script>
+    <script src="js/stocks.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $(document).ready(function() {
+            // hisse senetleri sergisi
+            $(".stock-prices").marquee({
+                // duplicated: true,
+                // gap: 10,
+                delayBeforeStart: 1000,
+                pauseOnHover: true,
+                duration: 15000,
+            });
+
+            // header kısmını sabitlemek
+            $("header").wrap("<div class='header-placeholder'></div>");
+            $(".header-placeholder").height($("header").outerHeight(true));
+            const headeroff = $("header").offset().top;
+
+            $(window).scroll(function() {
+
+                const winPos = $(this).scrollTop();
+                if (winPos > headeroff) {
+                    $("header").addClass("fixed");
+                    $(".logo").addClass("logo-font");
+                    $(".logo-name").addClass("logo-name-font");
+                    $(".menu-btn-wrapper").css({
+                        "height": "25px",
+                        "width": "25px"
+                    });
+                } else {
+                    $(".logo").removeClass("logo-font");
+                    $(".logo-name").removeClass("logo-name-font");
+                    $(".menu-btn-wrapper").css({
+                        "height": "33px",
+                        "width": "33px"
+                    });
+                    $("header").removeClass("fixed");
+
+                }
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+# Local Netlify folder
+.netlify
+src-codes
+main.scss
+src
+*.scss
+*.sass
