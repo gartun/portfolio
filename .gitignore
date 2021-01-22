@@ -5,3 +5,4 @@ main.scss
 src
 *.scss
 *.sass
+*.log
