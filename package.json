@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "[**Portfolio**](https://artgokhan.netlify.app/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gartun/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gartun/portfolio/issues"
+  },
+  "homepage": "https://github.com/gartun/portfolio#readme",
+  "devDependencies": {
+    "eslint": "^7.25.0"
+  }
+}

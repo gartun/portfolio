@@ -24,6 +24,7 @@ body {
 
 header {
     padding: .2em .5em;
+    border-bottom-color: coral;
     border-bottom: 2px solid var(--main-orange);
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.85));
 }
@@ -121,6 +122,8 @@ nav {
     padding: 1em;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.7);
+    color: darkblue;
+    color: var(--text-blue);
     width: 95%;
     max-width: 950px;
     margin: 1em auto;
@@ -413,6 +416,11 @@ aside {
         justify-content: space-between;
         align-items: center;
     }
+    
+    .info-card-wrapper {
+        max-width: 850px;    
+    }
+    
     .info-img-wrapper img {
         height: 150px;
         object-fit: cover;
@@ -444,7 +452,7 @@ aside {
         padding: .7em;
         border-radius: 10px 0 0 10px;
         background-color: white;
-        z-index: -333;
+        z-index: 333;
     }
     .slide-img-wrapper {
         width: 220px;
@@ -538,6 +546,9 @@ aside {
         max-width: 1200px;
         transform: translateX(-15%) !important;
     }
+    .table-wrapper * {
+        color: #000;
+    } 
     th,
     td,
     caption {
