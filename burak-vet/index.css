@@ -236,6 +236,9 @@ nav {
 }
 
 .question {
+    width: 100%;
+    background: transparent;
+    border: none;
     display: flex;
     justify-content: space-between;
     align-items: center;

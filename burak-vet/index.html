@@ -20,10 +20,10 @@
         </div>
         <nav>
             <ul class="navul">
-                <li class="navlist"><a href="#section1" id="sect1" class="navlink">Veterineriniz</a></li>
-                <li class="navlist"><a href="#section2" id="sect2" class="navlink">Hizmetler</a></li>
-                <li class="navlist"><a href="#section3" id="sect3" class="navlink">Fiyatlandırma</a></li>
-                <li class="navlist"><a href="#section4" id="sect4" class="navlink ">İletişim</a></li>
+                <li class="navlist"><a href="#section1" id="sect1" class="navlink" data-sectionId="section1">Veterineriniz</a></li>
+                <li class="navlist"><a href="#section2" id="sect2" class="navlink" data-sectionId="section2">Hizmetler</a></li>
+                <li class="navlist"><a href="#section3" id="sect3" class="navlink" data-sectionId="section3">Fiyatlandırma</a></li>
+                <li class="navlist"><a href="#section4" id="sect4" class="navlink" data-sectionId="section4">İletişim</a></li>
             </ul>
         </nav>
     </header>
@@ -53,29 +53,29 @@
     <section class="sections" id="section2">
         <div class="questions-wrapper">
             <div class="question-answer" data-aos="fade-down-right" data-aos-delay="100" data-aos-duration="1000">
-                <div class="question">
+                <button class="question">
                     <h2 class="question-title">Kanatlı hayvanları muayene ediyor musunuz?</h2>
                     <span class="btn"><span class="icon">+</span>
                     <span class="minus-icon">-</span></span>
-                </div>
+                </button>
                 <div class="answer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum mollitia et placeat laudantium, magnam sint aspernatur quia tenetur esse, libero iure amet! Saepe, earum est.</div>
             </div>
             <div class="question-answer" data-aos="fade-down-right" data-aos-delay="250" data-aos-duration="1000">
-                <div class="question">
+                <button class="question">
                     <h2 class="question-title">Cerrahi işlem yetkinliğiniz var mı?</h2>
                     <span class="btn"><span class="icon">+</span>
                     <span class="minus-icon">-</span></span>
-                </div>
+                </button>
                 <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nobis eum non distinctio dolorum dolorem? Placeat, fugit saepe consequuntur animi maxime cupiditate! Illo eaque voluptatum culpa autem laborum officiis enim laudantium delectus
                     dolore. Magnam esse odit atque hic reiciendis aliquam aliquid. Placeat delectus recusandae in qui illum, cupiditate corrupti nostrum! Nesciunt veniam vel sed aspernatur.</div>
             </div>
             <div class="question-answer" data-aos="fade-down-right" data-aos-delay="400" data-aos-duration="1000">
-                <div class="question">
-                    <h2 class="question-title">Hayvan mamaları bulunduruyor musunuz?</h2>
+                <button class="question">
+                    <h2 class="question-title" aria-controls="answer3">Hayvan mamaları bulunduruyor musunuz?</h2>
                     <span class="btn"><span class="icon">+</span>
                     <span class="minus-icon">-</span></span>
-                </div>
-                <div class="answer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero consectetur eligendi pariatur repellendus unde. Corrupti, pariatur vitae. Eligendi placeat saepe repudiandae nisi corrupti laboriosam incidunt quas ullam dicta at nam accusamus
+                </button>
+                <div class="answer" id="answer3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero consectetur eligendi pariatur repellendus unde. Corrupti, pariatur vitae. Eligendi placeat saepe repudiandae nisi corrupti laboriosam incidunt quas ullam dicta at nam accusamus
                     repellat perferendis cum debitis quae, itaque ea hic deleniti?
                 </div>
             </div>

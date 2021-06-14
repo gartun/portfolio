@@ -2,6 +2,7 @@ const sec1 = document.querySelector("#section1");
 const sec2 = document.querySelector("#section2");
 const sec3 = document.querySelector("#section3");
 const sec4 = document.querySelector("#section4");
+const sections = [].slice.call(document.getElementsByTagName("section"));
 
 const sec1top = getElementOffset(sec1);
 const sec2top = getElementOffset(sec2);
@@ -12,31 +13,51 @@ const secLink1 = document.querySelector("#sect1");
 const secLink2 = document.querySelector("#sect2");
 const secLink3 = document.querySelector("#sect3");
 const secLink4 = document.querySelector("#sect4");
+const navLinks = [].slice.call(document.getElementsByClassName("navlink"));
 
-window.onscroll = () => {
-    let winBot = Math.floor(window.pageYOffset + window.innerHeight);
+// link activation animation starts
+function activateIt(secId) {
+    navLinks.forEach(link => {
+        if(link.dataset.sectionid === secId){
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active")
+        }
+    })
+}
 
+if("IntersectionObserver" in window) {
+    const secObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                activateIt(entry.target.id);
+            }
+        })
+    })
 
-    if (winBot > sec4top) {
-        removeActive("sect4");
-        secLink4.classList.add("active");
-    }
-    if (winBot > sec3top && winBot <= sec4top) {
-        removeActive("sect3");
-        secLink3.classList.add("active");
+    sections.forEach(sec => {
+        secObserver.observe(sec);
+    })
+} else {
 
-    }
-    if (winBot > sec2top && winBot <= sec3top) {
-        removeActive("sect2");
-        secLink2.classList.add("active");
-    }
-    if (winBot > sec1top && winBot <= sec2top) {
-        removeActive("sect1");
-        secLink1.classList.add("active");
-    }
-    if (window.pageYOffset === 0) {
-        removeActive("sect1");
-        secLink1.classList.add("active");
+    window.onscroll = () => {
+        let winBot = Math.floor(window.pageYOffset + window.innerHeight);
+        
+        if (winBot > sec4top) {
+            activateIt("section4");
+        }
+        if (winBot > sec3top && winBot <= sec4top) {
+            activateIt("section3");
+        }
+        if (winBot > sec2top && winBot <= sec3top) {
+            activateIt("section2");
+        }
+        if (winBot > sec1top && winBot <= sec2top) {
+            activateIt("section1");
+        }
+        if (window.pageYOffset === 0) {
+            activateIt("section1");
+        }
     }
 }
 
@@ -50,14 +71,7 @@ function getElementOffset(el) {
 
     return top;
 }
-
-function removeActive(linkId) {
-    document.querySelectorAll(".navlink").forEach(link => {
-        if (link.classList.contains('active') && link.id !== linkId) {
-            link.classList.remove('active');
-        }
-    });
-}
+// link activation animation ends
 
 //open answers
 const questions = document.querySelectorAll(".question");
