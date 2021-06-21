@@ -79,12 +79,7 @@ main {
   margin: 0 auto;
   position: relative;
 }
-@supports (scrollbar-track-color: crimson) {
-  main {
-    scrollbar-track-color: crimson;
-    scrollbar-color: #000;
-  }
-}
+
 main section {
   position: absolute;
   top: 0.8em;
@@ -160,7 +155,9 @@ footer {
   height: 100%;
 }
 .content-li {
+  position: relative;
   flex: 0 0 300px;
+  overflow: hidden;
 }
 .content-link {
   font-size: 1rem;
@@ -170,6 +167,20 @@ footer {
   font-family: monospace;
   font-size: 1rem;
 }
+
+.source-code {
+  display: inline-block;
+  position: absolute;
+  left: 1em;
+  bottom: -100%;
+  background-color: ghostwhite;
+  color: #000;
+  padding: 0.7em;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: bottom .4s;
+}
+
 .name,
 .projects-title,
 .contact-section > h1 {
@@ -229,12 +240,18 @@ footer {
   .content-li {
     margin: 0.9em;
     padding: 1em 0 0 0.2em;
+    min-height: 200px;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
     box-shadow: 1px 5px 20px black;
     border-radius: 10px;
   }
+
+  .content-li:hover .source-code {
+    bottom: 1em;
+  }
+
   .content-link {
     color: #fff;
   }
