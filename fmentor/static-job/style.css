@@ -1,0 +1,268 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #effafa;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+}
+
+.header-banner {
+  height: 100px;
+  background: url(./images/bg-header-mobile.svg);
+  background-size: cover;
+  background-position: bottom;
+  background-color: #5ba4a4;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .header-banner {
+    background: url(./images/bg-header-desktop.svg);
+    height: 150px;
+    background-color: #5ba4a4;
+  }
+}
+
+main {
+  padding: 2em 0;
+  position: relative;
+}
+@media (min-width: 768px) {
+  main {
+    padding: 3.75em 0;
+  }
+}
+
+.chosen-tablets {
+  display: none;
+  justify-content: space-between;
+  margin: -3.075em auto 2em;
+  width: 85%;
+  min-height: 2.15em;
+  max-width: 950px;
+  padding: 0.85em;
+  background: white;
+  box-shadow: 0 6px 3px -2px gray;
+}
+@media (min-width: 768px) {
+  .chosen-tablets {
+    margin: -4.825em auto 2em;
+    padding: 1.25em;
+  }
+}
+
+.chosen-tablet.tablet {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 0.7rem;
+}
+@media (min-width: 768px) {
+  .chosen-tablet.tablet {
+    font-size: 1.125rem;
+  }
+}
+
+.tablet-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.remove {
+  padding: 0.4em 0.6em;
+  font-size: 0.7rem;
+  background-color: #5ba4a4;
+  color: #fff;
+}
+.remove:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .remove {
+    font-size: 1.125rem;
+  }
+}
+
+.clear {
+  float: right;
+  background: none;
+  border: none;
+  color: #2c3a3a;
+}
+.clear:hover {
+  cursor: pointer;
+  color: #5ba4a4;
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .clear {
+    font-size: 1.4rem;
+  }
+}
+
+main > .card + .card {
+  margin-top: 2em;
+}
+@media (min-width: 768px) {
+  main > .card + .card {
+    margin-top: 3.75em;
+  }
+}
+
+.card {
+  position: relative;
+  width: 85%;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 8px -4px #5ba4a4, 0 12px 10px -9px #5ba4a4;
+}
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.card.recent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #5ba4a4;
+}
+
+.logo {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 40px;
+}
+@media (min-width: 768px) {
+  .logo {
+    position: static;
+    width: 80px;
+    margin-right: 0.75em;
+  }
+}
+@media (min-width: 1200px) {
+  .logo {
+    width: 100px;
+  }
+}
+
+.main-info {
+  padding-bottom: 0.75em;
+  border-bottom: 1px solid #7b8e8e;
+}
+@media (min-width: 768px) {
+  .main-info {
+    border-bottom: none;
+    margin-right: auto;
+    padding-bottom: none;
+  }
+}
+
+.company-name {
+  color: #5ba4a4;
+  font-size: 0.75rem;
+  margin-right: 1em;
+}
+@media (min-width: 768px) {
+  .company-name {
+    font-size: 0.95rem;
+  }
+}
+
+.tags {
+  padding: 0.7em 0.8em 0.3em;
+  border-radius: 10px;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .tags {
+    font-size: 0.75rem;
+  }
+}
+
+.new-tag {
+  background: #5ba4a4;
+}
+
+.featured-tag {
+  background: #000;
+}
+
+.position-title {
+  margin: 1em 0;
+  white-space: nowrap;
+}
+.position-title:hover {
+  color: #5ba4a4;
+  cursor: pointer;
+}
+
+.pale-text {
+  color: #7b8e8e;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.pale-text > span + span {
+  margin-left: 0.25em;
+}
+
+.tablets-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+  padding-top: 0.75em;
+}
+@media (min-width: 768px) {
+  .tablets-wrapper {
+    padding-top: 0;
+    justify-content: flex-end;
+  }
+}
+
+.tablet {
+  flex: 0 0 auto;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.4em 0.6em;
+  border-radius: 4px;
+  background-color: #eef6f6;
+  color: #5ba4a4;
+}
+.tablet:hover {
+  background-color: #5ba4a4;
+  color: #fff;
+  cursor: pointer;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+/*# sourceMappingURL=style.css.map */
