@@ -26,13 +26,20 @@ function activateIt(secId) {
     })
 }
 
+// use IntersectionObserver API for 
+// modern browsers
 if("IntersectionObserver" in window) {
     const secObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            if(entry.isIntersecting) {
+            if(entry.isIntersecting &&
+               entry.intersectionRatio >= 0.5) {
                 activateIt(entry.target.id);
             }
         })
+      }, {
+        // call the cb function at this
+        // threshold
+        threshold: 0.75
     })
 
     sections.forEach(sec => {
@@ -41,6 +48,7 @@ if("IntersectionObserver" in window) {
 } else {
 
     window.onscroll = () => {
+        // take the bottom of the window
         let winBot = Math.floor(window.pageYOffset + window.innerHeight);
         
         if (winBot > sec4top) {
@@ -92,11 +100,8 @@ questions.forEach(function(question) {
 const fyear = document.getElementById("year");
 const curYear = new Date().getFullYear();
 
-if (curYear != 2020) {
-    fyear.innerText = `2020 - ${curYear}`;
-} else {
-    fyear.innerText = "2020";
-}
+fyear.innerText = curYear != 2020 ? `2020 - ${curYear}` : '2020'
+
 
 // slide
 const srcs = [
