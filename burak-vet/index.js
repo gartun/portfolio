@@ -18,7 +18,7 @@ const navLinks = [].slice.call(document.getElementsByClassName("navlink"));
 // link activation animation starts
 function activateIt(secId) {
     navLinks.forEach(link => {
-        if(link.dataset.sectionid === secId){
+        if(link.dataset.sectionid === secId) {
             link.classList.add("active");
         } else {
             link.classList.remove("active")
@@ -32,7 +32,7 @@ if("IntersectionObserver" in window) {
     const secObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if(entry.isIntersecting &&
-               entry.intersectionRatio >= 0.5) {
+               entry.intersectionRatio >= 0.75) {
                 activateIt(entry.target.id);
             }
         })
@@ -48,7 +48,8 @@ if("IntersectionObserver" in window) {
 } else {
 
     window.onscroll = () => {
-        // take the bottom of the window
+        // take the bottom position of
+        // the window
         let winBot = Math.floor(window.pageYOffset + window.innerHeight);
         
         if (winBot > sec4top) {

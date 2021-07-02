@@ -104,13 +104,16 @@ nav {
     overflow: hidden;
 }
 
-.sections:last-of-type,
+.sections:last-of-type {
+  min-height: 50vh;
+}
+
 .sections:nth-last-of-type(2) {
-    min-height: 50vh;
+  min-height: 75vh;
 }
 
 /* Enlarge contact section for landscape mode */
-@media (orientation: landscape){
+@media (orientation: landscape) {
   .sections:last-of-type {
     min-height: 100vh;
   }
