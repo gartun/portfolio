@@ -162,10 +162,12 @@
             $(".navul a").on("click", function(e) {
                 e.preventDefault();
                 const hash = this.hash;
+                
                 if (hash !== "") {
-                    $("html, body").animate({
+                    $("html, body")
+                      .animate({
                         scrollTop: $(hash).offset().top - $("header").outerHeight()
-                    }, 1300);
+                      }, 1300);
                 }
             });
         });
