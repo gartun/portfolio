@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -23,7 +23,7 @@
   
   <main>
     <div class="content-wrapper first-wrapper">
-      <h1 class="app-name">TODO</h1>
+      <h1 class="app-name">Ajanda</h1>
       <button class="mode">
         <img src="./images/icon-moon.svg" alt="" />
       </button>
@@ -32,70 +32,41 @@
     <div class="content-wrapper new-todo-wrapper">
       <p>
       <span role="checkbox" id="add-checkbox" tabindex="0"></span>
-      <input type="text" id="new-todo" placeholder="Create a new Todo..." />
+      <input type="text" id="new-todo" placeholder="Ajandaya yeni öge ekle..." />
       </p>
     </div>
 
     <div role="list" class="todo-ul content-wrapper">
-      <p role="listitem" class="todo-item" draggable="true">
-        <span role="checkbox" class="complete-checkbox" tabindex="0"></span>
-        <span>Finish the alSanaİş app</span>
-        <button class="rmv-btn">x</button>
-      </p>
-
-      <p role="listitem" class="todo-item" draggable="true">
-        <span role="checkbox" class="complete-checkbox" tabindex="0"></span>
-        <span>Finish the alSanaİş app</span>
-        <button class="rmv-btn">x</button>
-      </p>
-
-      <p role="listitem" class="todo-item" draggable="true">
-        <span role="checkbox" class="complete-checkbox" tabindex="0"></span>
-        <span>new todo 1</span>
-        <button class="rmv-btn">x</button>
-      </p>
-
-      <p role="listitem" class="todo-item" draggable="true">
-        <span role="checkbox" class="complete-checkbox" tabindex="0"></span>
-        <span>new todo 2</span>
-        <button class="rmv-btn">x</button>
-      </p>
-
-      <p role="listitem" class="todo-item" draggable="true">
-        <span role="checkbox" class="complete-checkbox" tabindex="0"></span>
-        <span>new todo 3</span>
-        <button class="rmv-btn">x</button>
-      </p>
-
+      
       <p role="listitem" class="lastitem pale-text b-shadow">
         <span>
-          <span><span id="item-left"></span> items left</span>
+          <span><span id="item-left"></span> öge kaldı</span>
         </span>
 
         <span class="filter-spans-wrapper-div laptop">
           <span class="pale-text">
-            <span class="filter active-filter">All</span>
-            <span class="filter">Active</span>
-            <span class="filter">Completed</span>
+            <span class="filter active-filter">Tümü</span>
+            <span class="filter">Aktif</span>
+            <span class="filter">Tamamlanmış</span>
           </span>
         </span>
 
         <button class="clear-completed">
-          Clear Completed
+          Tamamlananları Sil
         </button>
       </p>
     </div>
     <div class="content-wrapper filter-spans-wrapper-div phone">
       <p class="pale-text b-shadow">
-        <span class="filter active-filter">All</span>
-        <span class="filter">Active</span>
-        <span class="filter">Completed</span>
+        <span class="filter active-filter">Tümü</span>
+        <span class="filter">Aktif</span>
+        <span class="filter">Tamamlanmış</span>
       </p>
     </div>
 
     
     <p class="dragdrophint pale-text">
-      Drag and drop to reorder list (not working on IE)
+      Listeyi düzenlemek için sürükle ve bırak (Intertent Explorer tarayıcısında çalışmaz)
     </p>
   
   </main>
