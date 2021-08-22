@@ -261,7 +261,7 @@ footer {
         rgba(0, 0, 0, 0.85) 40%,
         rgba(0, 0, 0, 0.2)
       ),
-      url("./img/ÖC.PNG");
+      url("./img/fmentor.PNG");
   }
   .content-li:nth-child(2) {
     background: linear-gradient(
@@ -269,7 +269,7 @@ footer {
         rgba(0, 0, 0, 0.85) 40%,
         rgba(0, 0, 0, 0.2)
       ),
-      url("./img/KY.PNG");
+      url("./img/ÖC.PNG");
   }
   .content-li:nth-child(3) {
     background: linear-gradient(
@@ -277,7 +277,7 @@ footer {
         rgba(0, 0, 0, 0.85) 40%,
         rgba(0, 0, 0, 0.2)
       ),
-      url("./img/BV.PNG");
+      url("./img/KY.PNG");
   }
   .content-li:nth-child(4) {
     background: linear-gradient(
@@ -285,7 +285,7 @@ footer {
         rgba(0, 0, 0, 0.85) 40%,
         rgba(0, 0, 0, 0.2)
       ),
-      url("./img/WS.PNG");
+      url("./img/BV.PNG");
   }
   .content-li:nth-child(5) {
     background: linear-gradient(
@@ -293,7 +293,7 @@ footer {
         rgba(0, 0, 0, 0.85) 40%,
         rgba(0, 0, 0, 0.2)
       ),
-      url("./img/FEB.jpg");
+      url("./img/WS.PNG");
   }
   .content-li:nth-child(6) {
     background: linear-gradient(
@@ -301,6 +301,6 @@ footer {
         rgba(0, 0, 0, 0.85) 40%,
         rgba(0, 0, 0, 0.2)
       ),
-      url("./img/fmentor.PNG");
+      url("./img/FEB.jpg");
   }
 } /*# sourceMappingURL=index.css.map */
