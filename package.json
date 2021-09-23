@@ -4,7 +4,9 @@
   "description": "[**Portfolio**](https://artgokhan.netlify.app/)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass sass/main.scss index.css --style=compressed",
+    "sass:w": "sass --watch sass/main.scss index.css",
+    "pretty:scss": "prettier --write \"./**/*.scss\""
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/gartun/portfolio#readme",
   "devDependencies": {
-    "eslint": "^7.25.0"
+    "eslint": "^7.25.0",
+    "prettier": "^2.4.1"
   }
 }
