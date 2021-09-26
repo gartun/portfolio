@@ -4,8 +4,8 @@
   "description": "[**Portfolio**](https://artgokhan.netlify.app/)",
   "main": "index.js",
   "scripts": {
-    "sass": "sass sass/main.scss index.css --style=compressed",
-    "sass:w": "sass --watch sass/main.scss index.css",
+    "sass": "sass sass/main.scss styles.css --style=compressed",
+    "sass:w": "sass --watch sass/main.scss styles.css",
     "pretty:scss": "prettier --write \"./**/*.scss\""
   },
   "repository": {

@@ -16,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Potansiyel müşterilerinize veya takipçilerinize ulaşmanızın en kolay yolu olan bir internet sitesi kurma sürecinizde, bir arayüz (Front-end) kodlayıcısı olarak, size yardımcı oluyorum.">
     <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
@@ -26,15 +26,45 @@
   <body>
     <header>
       <nav>
-        <ul>
-          <li tabindex="0" class="active" role="listitem" data-tab="who">Kimdir</li>
-          <li tabindex="0" role="listitem" data-tab="projects">Projeler</li>
-          <li tabindex="0" role="listitem" data-tab="contact">İletişim</li>
-        </ul>
+        <div role="tablist" aria-label="bölümler">
+          <button
+            class="active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="intro-section"
+            id="who-tab"
+          >
+            Kimdir <span class="sr-only">Bölümü</span>
+          </button>
+
+          <button
+            role="tab"
+            aria-controls="projects-section"
+            id="projects-tab"
+          >
+            Projeler <span class="sr-only">Bölümü</span>
+          </button>
+
+          <button
+            role="tab"
+            aria-controls="contact-section"
+            id="contact-tab"
+          >
+            İletişim <span class="sr-only">Bölümü</span>
+          </button>
+        </div>
       </nav>
     </header>
+
     <main class="container">
-      <section class="intro-section show">
+      <section
+        tabindex="0"
+        role="tabpanel"
+        aria-labelledby="who-tab"
+        aria-hidden="false"
+        class="intro-section show"
+        id="intro-section"
+      >
         <h1 class="name">Gökhan Artun kimdir?</h1>
         <div class="info-box">
           <fieldset class="pic-wrapper">
@@ -50,7 +80,14 @@
         </div>
       </section>
 
-      <section class="projects-section">
+      <section
+        tabindex="0"
+        role="tabpanel"
+        aria-labelledby="projects-tab"
+        aria-hidden="true"
+        class="projects-section"
+        id="projects-section"
+      >
         <h2 class="projects-title">Örnek Projeler</h2>
         <ul class="content-ul" style="list-style: none;" role="list">
           <li class="content-li">
@@ -84,7 +121,14 @@
         </ul>
       </section>
       
-      <section class="contact-section">
+      <section
+        tabindex="0"
+        role="tabpanel"
+        aria-labelledby="contact-tab"
+        aria-hidden="true"
+        class="contact-section"
+        id="contact-section"
+      >
         <h1>Nasıl ulaşabilirsiniz?</h1>
         <ul style="list-style: none;" role="list">
           <li>github: <a href="http://github.com/gartun" target="_blank" rel="noopener noreferrer">@gartun</a></li>
@@ -94,6 +138,6 @@
     </main>
     <footer><span id="footer-year"></span></footer>
     
-    <script src="./index.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
