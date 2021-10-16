@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Account</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./prefixed-styles.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="info-text">
+          <h2>Profilinizi Seçin</h2>
+          <p>
+            Giriş yapmış olan kullanıcılar daha detaylı içerikleri görebilirler,
+            ve iletişim bilgilerini kaydedebilirler.
+          </p>
+        </div>
+        <div class="user-cards">
+          <div class="user-cards__card">
+            <img
+              src="./christian-buehner-DItYlc26zVI-unsplash.jpg"
+              alt="Photo by christian buehner on Unsplash"
+            />
+            <p class="name">Berkan Serkan</p>
+            <div
+              class="dots"
+              tabindex="0"
+              role="button"
+              aria-label="hesap ile ilgili işlemleri gör"
+            >
+              ...
+            </div>
+            <ul class="menu">
+              <li
+                role="button"
+                aria-roledescription="Berkan Serkan profilinin bilgilerini düzenle"
+                tabindex="0"
+              >
+                <i class="fas fa-pen"></i> Düzenle
+              </li>
+              <li role="button" aria-roledescription="Profili sil" tabindex="0">
+                <i class="fas fa-trash"></i> Sil
+              </li>
+            </ul>
+          </div>
+
+          <div class="user-cards__card">
+            <img
+              src="./patrik-velich-RtVGS4vGkgM-unsplash.jpg"
+              alt="Photo by Patrik Velich on Unsplash"
+            />
+            <p class="name">Şeyda Almeida</p>
+            <div
+              class="dots"
+              tabindex="0"
+              role="button"
+              aria-label="hesap ile ilgili işlemleri gör"
+            >
+              ...
+            </div>
+            <ul class="menu">
+              <li
+                role="button"
+                aria-roledescription="Şeyda almeida profilinin bilgilerini düzenle"
+                tabindex="0"
+              >
+                <i class="fas fa-pen"></i> Düzenle
+              </li>
+              <li role="button" aria-label="Profili sil" tabindex="0">
+                <i class="fas fa-trash"></i> Sil
+              </li>
+            </ul>
+          </div>
+
+          <div class="btn-wrapper">
+            <button class="add-new" aria-label="yeni hesap ekle">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
