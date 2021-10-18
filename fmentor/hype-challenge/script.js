@@ -152,7 +152,7 @@ window.onload = function () {
 
     firstTxt.forEach(function (txt) {
       txt.style.marginLeft = diff === 0 ? "0" : diff + "00%";
-
+      console.log(getComputedStyle(txt).marginLeft)
       switch (diff) {
         case 0:
           txt.setAttribute("aria-hidden", "false");
