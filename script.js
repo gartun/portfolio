@@ -17,9 +17,10 @@ window.onload = function () {
 
   function shouldUpdate(eve, tb) {
     var isSelected = tb.getAttribute("aria-selected");
-
+    // if already selected then no need to update ui.
     if (isSelected === "true") return;
 
+    // before activating the selected tab, deactivate all.
     deactivateTabs();
 
     activateTab(tb);

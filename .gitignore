@@ -2,9 +2,7 @@
 node_modules
 .netlify
 src-codes
-main.scss
+
 src
-*.scss
-*.sass
 *.log
 test.js
