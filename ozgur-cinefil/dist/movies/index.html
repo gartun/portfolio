@@ -1,205 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Özgür'den her türlü moda uygun film tavsiyeleri! Spoiler verilmeden yapılan detaylı sahne analizleriyle birlikte upuzuuun bir liste sizlere sunuluyor...">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Özgür'den her türlü moda uygun film tavsiyeleri! Spoiler verilmeden yapılan detaylı sahne analizleriyle birlikte upuzuuun bir liste sizlere sunuluyor..."
+    />
     <title>Filmler | ÖzgürCinefil</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="../normalize.css">
-    <link rel="stylesheet" href="./css/movies.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel= "stylesheet" href="./index.min.css" />
 
-</head>
+  </head>
 
-<body>
-  <div id="skip">
-    <a href="main">Ana İçeriğe Git</a>
-  </div>
-    <noscript><p>Tarayıcınız JavaScript kodlarını çalıştırmıyor, bu durum, siteden alınan verimi düşürür.</p></noscript>
-    <header>
-        <div class="logo">
-            <a href="./whoami.html">
-                <p><span id="first-letter">Ö</span>zgür</p>
-            </a>
+  <body>
+    <div class="overflow-controller">
+      <div id="skip">
+        <a href="main">Ana İçeriğe Git</a>
+      </div>
+      <noscript
+        ><p>
+          Tarayıcınız JavaScript kodlarını çalıştırmıyor, bu durum, siteden
+          alınan verimi düşürür.
+        </p></noscript
+      >
+      <header>
+        <div class="container">
+
+          <div class="logo">
+          <a href="../index.html">
+            <p><span id="first-letter">Ö</span>zgür</p>
+          </a>
         </div>
         <div>
-            <div class="hmbrgr-btn-container">
-                <div class="hmbrgr-btn"></div>
-            </div>
-            <nav>
-                <ul class="navul">
-                    <li class="navlist"><a href="./index.html" class="navlink">Ana Sayfa <i class="material-icons">home</i></a></li>
-                    <li class="navlist"><a href="./movies.html" class="navlink" id="active">Film Tavsiyeleri <i class="material-icons">thumb_up</i></a></li>
-                    <li class="navlist"><a href="./directors.html" class="navlink">Yönetmen Eleştirisi <i class="material-icons">stars</i></a></li>
-                    <li class="navlist"><a href="./searchmovie.html" class="navlink">Film Ara<i class="material-icons">search</i></a></li>
-                    <li class="navlist"><a href="../index.html" class="navlink">Proje Sayfasına Dön</a></li>
-                </ul>
-            </nav>
+          <div class="hmbrgr-btn">
+            <div class="hmbrgr-btn__base"></div>
+          </div>
+          <nav>
+            <ul class="navul">
+              <li class="navlist">
+                <a href="../index.html" class="navlink"
+                  >Ana Sayfa <i class="material-icons">home</i></a
+                >
+              </li>
+              <li class="navlist">
+                <a href="#" class="navlink" id="active"
+                  >Film Tavsiyeleri <i class="material-icons">thumb_up</i></a
+                >
+              </li>
+              <li class="navlist">
+                <a href="../directors/index.html" class="navlink"
+                >Yönetmen Eleştirisi <i class="material-icons">stars</i></a
+                >
+              </li>
+              <li class="navlist">
+                <a href="../searchmovie/index.html" class="navlink"
+                  >Film Ara<i class="material-icons">search</i></a
+                >
+              </li>
+              <li class="navlist">
+                <a href="../../../index.html" class="navlink">Proje Sayfasına Dön</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-    </header>
-    <a href="#" id="to-top-button">&Uparrow;</a>
-    <div id="arka"></div>
-    <main id="main">
-        <ul class="content-list">
+      </div>
+      </header>
+      <a href="#" id="to-top-button">&Uparrow;</a>
+      <div id="arka"></div>
+      <main id="main">
+        <div class="container">
+          <ul class="content-list">
             <li>
-                <a class="theme-names" href="#content-1">Psikoloji Temalı Filmler</a>
+              <a class="theme-names" href="#content-1"
+                >Psikoloji Temalı Filmler</a
+              >
             </li>
             <li>
-                <a class="theme-names" href="#content-2">Festival Filmleri</a>
+              <a class="theme-names" href="#content-2">Festival Filmleri</a>
             </li>
             <li>
-                <a class="theme-names" href="#content-3">Türkiye Sineması</a>
+              <a class="theme-names" href="#content-3">Türkiye Sineması</a>
             </li>
             <li>
-                <a class="theme-names" href="#content-4">Kişisel Öneriler</a>
+              <a class="theme-names" href="#content-4">Kişisel Öneriler</a>
             </li>
-        </ul>
-        <h3 class="exp-title">Seçimlerle ilgili açıklamalar</h3>
-        <hr>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non obcaecati, magni aliquid accusantium voluptate laudantium sequi distinctio laboriosam mollitia nihil nesciunt maiores facere illo perferendis, recusandae architecto perspiciatis natus!
-            Deserunt itaque placeat, ipsum delectus debitis neque asperiores nihil ea maiores, veritatis tempore sit pariatur dolore totam quidem quae! Ea, sequi dolorum natus perspiciatis excepturi maiores. Minima magni, culpa, quos nulla deserunt quasi
-            dolores ipsam molestias, aut consectetur atque. Commodi, ratione neque? Sit nemo reiciendis saepe excepturi quaerat voluptatibus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quod dolorem cum non excepturi a consequatur,
-            modi amet omnis dolor. Quaerat, possimus? Dicta voluptatem sunt accusantium magnam recusandae blanditiis, minima rem quae sapiente ut. Eligendi, omnis possimus error exercitationem repellat animi nesciunt tenetur suscipit deserunt.</p>
-        <section class="movies">
+          </ul>
+          <h3 class="exp-title">Seçimlerle ilgili açıklamalar</h3>
+          <hr />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+            obcaecati, magni aliquid accusantium voluptate laudantium sequi
+            distinctio laboriosam mollitia nihil nesciunt maiores facere illo
+            perferendis, recusandae architecto perspiciatis natus! Deserunt
+            itaque placeat, ipsum delectus debitis neque asperiores nihil ea
+            maiores, veritatis tempore sit pariatur dolore totam quidem quae!
+            Ea, sequi dolorum natus perspiciatis excepturi maiores. Minima
+            magni, culpa, quos nulla deserunt quasi dolores ipsam molestias, aut
+            consectetur atque. Commodi, ratione neque? Sit nemo reiciendis saepe
+            excepturi quaerat voluptatibus? Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Voluptatum quod dolorem cum non
+            excepturi a consequatur, modi amet omnis dolor. Quaerat, possimus?
+            Dicta voluptatem sunt accusantium magnam recusandae blanditiis,
+            minima rem quae sapiente ut. Eligendi, omnis possimus error
+            exercitationem repellat animi nesciunt tenetur suscipit deserunt.
+          </p>
+          <section class="movies">
             <div class="genre">
-                <h2 class="genre-name" id="content-1">Psikoloji temalı filmler</h2>
-                <dl class="movie-list">
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea cumque expedita incidunt quia officia illo molestiae, voluptatibus optio commodi odio earum. Voluptas, esse
-                        saepe aperiam, ullam repudiandae expedita natus explicabo, itaque ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum ratione dignissimos! Temporibus dolores maiores voluptatum quis, beatae sapiente ipsa harum.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem vitae sapiente quos sequi quas laborum ad. Quae unde voluptates enim velit aliquam, veritatis optio saepe consequuntur dolor delectus eos cumque deserunt libero
-                        eveniet perferendis? Veniam dolores sit officiis nobis possimus? Quia consectetur, delectus saepe corporis modi dolores debitis aliquam eos eveniet facere sed amet porro soluta beatae pariatur quo fugit quidem labore eius sit quod
-                        ducimus ratione dolorum expedita. Molestiae labore autem dolor dolore aperiam incidunt mollitia.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque quod obcaecati dolorum sed culpa reiciendis facere rem, sapiente, aperiam minus illo. Amet, vel? Quia aspernatur deserunt beatae ab assumenda expedita illum, enim quos
-                        et voluptatum!</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti vel debitis impedit reprehenderit ipsum, eum mollitia nisi, at deleniti totam fugit dicta ipsa explicabo minima animi iusto nihil hic deserunt unde quibusdam repellat
-                        in! Magni, reiciendis! Consequuntur quam ex incidunt rem deleniti corporis similique ut.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea cumque expedita incidunt quia officia illo molestiae, voluptatibus optio commodi odio earum. Voluptas, esse
-                        saepe aperiam, ullam repudiandae expedita natus explicabo, itaque ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum ratione dignissimos! Temporibus dolores maiores voluptatum quis, beatae sapiente ipsa harum.</dd>
-                </dl>
+              <h2 class="genre-name" id="content-1">
+                Psikoloji temalı filmler
+              </h2>
+              <dl class="movie-list">
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea
+                  cumque expedita incidunt quia officia illo molestiae,
+                  voluptatibus optio commodi odio earum. Voluptas, esse saepe
+                  aperiam, ullam repudiandae expedita natus explicabo, itaque
+                  ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum
+                  ratione dignissimos! Temporibus dolores maiores voluptatum
+                  quis, beatae sapiente ipsa harum.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  voluptatem vitae sapiente quos sequi quas laborum ad. Quae
+                  unde voluptates enim velit aliquam, veritatis optio saepe
+                  consequuntur dolor delectus eos cumque deserunt libero eveniet
+                  perferendis? Veniam dolores sit officiis nobis possimus? Quia
+                  consectetur, delectus saepe corporis modi dolores debitis
+                  aliquam eos eveniet facere sed amet porro soluta beatae
+                  pariatur quo fugit quidem labore eius sit quod ducimus ratione
+                  dolorum expedita. Molestiae labore autem dolor dolore aperiam
+                  incidunt mollitia.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque quod obcaecati dolorum sed culpa reiciendis facere rem,
+                  sapiente, aperiam minus illo. Amet, vel? Quia aspernatur
+                  deserunt beatae ab assumenda expedita illum, enim quos et
+                  voluptatum!
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Corrupti vel debitis impedit reprehenderit ipsum, eum mollitia
+                  nisi, at deleniti totam fugit dicta ipsa explicabo minima
+                  animi iusto nihil hic deserunt unde quibusdam repellat in!
+                  Magni, reiciendis! Consequuntur quam ex incidunt rem deleniti
+                  corporis similique ut.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea
+                  cumque expedita incidunt quia officia illo molestiae,
+                  voluptatibus optio commodi odio earum. Voluptas, esse saepe
+                  aperiam, ullam repudiandae expedita natus explicabo, itaque
+                  ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum
+                  ratione dignissimos! Temporibus dolores maiores voluptatum
+                  quis, beatae sapiente ipsa harum.
+                </dd>
+              </dl>
             </div>
             <div class="genre">
-                <h2 class="genre-name" id="content-2">Festival filmleri</h2>
-                <dl class="movie-list">
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea cumque expedita incidunt quia officia illo molestiae, voluptatibus optio commodi odio earum. Voluptas, esse
-                        saepe aperiam, ullam repudiandae expedita natus explicabo, itaque ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum ratione dignissimos! Temporibus dolores maiores voluptatum quis, beatae sapiente ipsa harum.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem vitae sapiente quos sequi quas laborum ad. Quae unde voluptates enim velit aliquam, veritatis optio saepe consequuntur dolor delectus eos cumque deserunt libero
-                        eveniet perferendis? Veniam dolores sit officiis nobis possimus? Quia consectetur, delectus saepe corporis modi dolores debitis aliquam eos eveniet facere sed amet porro soluta beatae pariatur quo fugit quidem labore eius sit quod
-                        ducimus ratione dolorum expedita. Molestiae labore autem dolor dolore aperiam incidunt mollitia.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque quod obcaecati dolorum sed culpa reiciendis facere rem, sapiente, aperiam minus illo. Amet, vel? Quia aspernatur deserunt beatae ab assumenda expedita illum, enim quos
-                        et voluptatum!</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti vel debitis impedit reprehenderit ipsum, eum mollitia nisi, at deleniti totam fugit dicta ipsa explicabo minima animi iusto nihil hic deserunt unde quibusdam repellat
-                        in! Magni, reiciendis! Consequuntur quam ex incidunt rem deleniti corporis similique ut.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea cumque expedita incidunt quia officia illo molestiae, voluptatibus optio commodi odio earum. Voluptas, esse
-                        saepe aperiam, ullam repudiandae expedita natus explicabo, itaque ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum ratione dignissimos! Temporibus dolores maiores voluptatum quis, beatae sapiente ipsa harum.</dd>
-                </dl>
+              <h2 class="genre-name" id="content-2">Festival filmleri</h2>
+              <dl class="movie-list">
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea
+                  cumque expedita incidunt quia officia illo molestiae,
+                  voluptatibus optio commodi odio earum. Voluptas, esse saepe
+                  aperiam, ullam repudiandae expedita natus explicabo, itaque
+                  ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum
+                  ratione dignissimos! Temporibus dolores maiores voluptatum
+                  quis, beatae sapiente ipsa harum.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  voluptatem vitae sapiente quos sequi quas laborum ad. Quae
+                  unde voluptates enim velit aliquam, veritatis optio saepe
+                  consequuntur dolor delectus eos cumque deserunt libero eveniet
+                  perferendis? Veniam dolores sit officiis nobis possimus? Quia
+                  consectetur, delectus saepe corporis modi dolores debitis
+                  aliquam eos eveniet facere sed amet porro soluta beatae
+                  pariatur quo fugit quidem labore eius sit quod ducimus ratione
+                  dolorum expedita. Molestiae labore autem dolor dolore aperiam
+                  incidunt mollitia.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque quod obcaecati dolorum sed culpa reiciendis facere rem,
+                  sapiente, aperiam minus illo. Amet, vel? Quia aspernatur
+                  deserunt beatae ab assumenda expedita illum, enim quos et
+                  voluptatum!
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Corrupti vel debitis impedit reprehenderit ipsum, eum mollitia
+                  nisi, at deleniti totam fugit dicta ipsa explicabo minima
+                  animi iusto nihil hic deserunt unde quibusdam repellat in!
+                  Magni, reiciendis! Consequuntur quam ex incidunt rem deleniti
+                  corporis similique ut.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea
+                  cumque expedita incidunt quia officia illo molestiae,
+                  voluptatibus optio commodi odio earum. Voluptas, esse saepe
+                  aperiam, ullam repudiandae expedita natus explicabo, itaque
+                  ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum
+                  ratione dignissimos! Temporibus dolores maiores voluptatum
+                  quis, beatae sapiente ipsa harum.
+                </dd>
+              </dl>
             </div>
             <div class="genre">
-                <h2 class="genre-name" id="content-3">Türkiye Sineması</h2>
-                <dl class="movie-list">
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea cumque expedita incidunt quia officia illo molestiae, voluptatibus optio commodi odio earum. Voluptas, esse
-                        saepe aperiam, ullam repudiandae expedita natus explicabo, itaque ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum ratione dignissimos! Temporibus dolores maiores voluptatum quis, beatae sapiente ipsa harum.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem vitae sapiente quos sequi quas laborum ad. Quae unde voluptates enim velit aliquam, veritatis optio saepe consequuntur dolor delectus eos cumque deserunt libero
-                        eveniet perferendis? Veniam dolores sit officiis nobis possimus? Quia consectetur, delectus saepe corporis modi dolores debitis aliquam eos eveniet facere sed amet porro soluta beatae pariatur quo fugit quidem labore eius sit quod
-                        ducimus ratione dolorum expedita. Molestiae labore autem dolor dolore aperiam incidunt mollitia.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque quod obcaecati dolorum sed culpa reiciendis facere rem, sapiente, aperiam minus illo. Amet, vel? Quia aspernatur deserunt beatae ab assumenda expedita illum, enim quos
-                        et voluptatum!</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti vel debitis impedit reprehenderit ipsum, eum mollitia nisi, at deleniti totam fugit dicta ipsa explicabo minima animi iusto nihil hic deserunt unde quibusdam repellat
-                        in! Magni, reiciendis! Consequuntur quam ex incidunt rem deleniti corporis similique ut.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea cumque expedita incidunt quia officia illo molestiae, voluptatibus optio commodi odio earum. Voluptas, esse
-                        saepe aperiam, ullam repudiandae expedita natus explicabo, itaque ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum ratione dignissimos! Temporibus dolores maiores voluptatum quis, beatae sapiente ipsa harum.</dd>
-                </dl>
+              <h2 class="genre-name" id="content-3">Türkiye Sineması</h2>
+              <dl class="movie-list">
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea
+                  cumque expedita incidunt quia officia illo molestiae,
+                  voluptatibus optio commodi odio earum. Voluptas, esse saepe
+                  aperiam, ullam repudiandae expedita natus explicabo, itaque
+                  ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum
+                  ratione dignissimos! Temporibus dolores maiores voluptatum
+                  quis, beatae sapiente ipsa harum.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  voluptatem vitae sapiente quos sequi quas laborum ad. Quae
+                  unde voluptates enim velit aliquam, veritatis optio saepe
+                  consequuntur dolor delectus eos cumque deserunt libero eveniet
+                  perferendis? Veniam dolores sit officiis nobis possimus? Quia
+                  consectetur, delectus saepe corporis modi dolores debitis
+                  aliquam eos eveniet facere sed amet porro soluta beatae
+                  pariatur quo fugit quidem labore eius sit quod ducimus ratione
+                  dolorum expedita. Molestiae labore autem dolor dolore aperiam
+                  incidunt mollitia.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque quod obcaecati dolorum sed culpa reiciendis facere rem,
+                  sapiente, aperiam minus illo. Amet, vel? Quia aspernatur
+                  deserunt beatae ab assumenda expedita illum, enim quos et
+                  voluptatum!
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Corrupti vel debitis impedit reprehenderit ipsum, eum mollitia
+                  nisi, at deleniti totam fugit dicta ipsa explicabo minima
+                  animi iusto nihil hic deserunt unde quibusdam repellat in!
+                  Magni, reiciendis! Consequuntur quam ex incidunt rem deleniti
+                  corporis similique ut.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea
+                  cumque expedita incidunt quia officia illo molestiae,
+                  voluptatibus optio commodi odio earum. Voluptas, esse saepe
+                  aperiam, ullam repudiandae expedita natus explicabo, itaque
+                  ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum
+                  ratione dignissimos! Temporibus dolores maiores voluptatum
+                  quis, beatae sapiente ipsa harum.
+                </dd>
+              </dl>
             </div>
             <div class="genre">
-                <h2 class="genre-name" id="content-4">Kişisel Öneriler</h2>
-                <dl class="movie-list">
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea cumque expedita incidunt quia officia illo molestiae, voluptatibus optio commodi odio earum. Voluptas, esse
-                        saepe aperiam, ullam repudiandae expedita natus explicabo, itaque ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum ratione dignissimos! Temporibus dolores maiores voluptatum quis, beatae sapiente ipsa harum.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem vitae sapiente quos sequi quas laborum ad. Quae unde voluptates enim velit aliquam, veritatis optio saepe consequuntur dolor delectus eos cumque deserunt libero
-                        eveniet perferendis? Veniam dolores sit officiis nobis possimus? Quia consectetur, delectus saepe corporis modi dolores debitis aliquam eos eveniet facere sed amet porro soluta beatae pariatur quo fugit quidem labore eius sit quod
-                        ducimus ratione dolorum expedita. Molestiae labore autem dolor dolore aperiam incidunt mollitia.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque quod obcaecati dolorum sed culpa reiciendis facere rem, sapiente, aperiam minus illo. Amet, vel? Quia aspernatur deserunt beatae ab assumenda expedita illum, enim quos
-                        et voluptatum!</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti vel debitis impedit reprehenderit ipsum, eum mollitia nisi, at deleniti totam fugit dicta ipsa explicabo minima animi iusto nihil hic deserunt unde quibusdam repellat
-                        in! Magni, reiciendis! Consequuntur quam ex incidunt rem deleniti corporis similique ut.</dd>
-                    <dt class="movie-name">Sample Movie</dt>
-                    <dd class="movie-story">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea cumque expedita incidunt quia officia illo molestiae, voluptatibus optio commodi odio earum. Voluptas, esse
-                        saepe aperiam, ullam repudiandae expedita natus explicabo, itaque ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum ratione dignissimos! Temporibus dolores maiores voluptatum quis, beatae sapiente ipsa harum.</dd>
-                </dl>
+              <h2 class="genre-name" id="content-4">Kişisel Öneriler</h2>
+              <dl class="movie-list">
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea
+                  cumque expedita incidunt quia officia illo molestiae,
+                  voluptatibus optio commodi odio earum. Voluptas, esse saepe
+                  aperiam, ullam repudiandae expedita natus explicabo, itaque
+                  ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum
+                  ratione dignissimos! Temporibus dolores maiores voluptatum
+                  quis, beatae sapiente ipsa harum.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  voluptatem vitae sapiente quos sequi quas laborum ad. Quae
+                  unde voluptates enim velit aliquam, veritatis optio saepe
+                  consequuntur dolor delectus eos cumque deserunt libero eveniet
+                  perferendis? Veniam dolores sit officiis nobis possimus? Quia
+                  consectetur, delectus saepe corporis modi dolores debitis
+                  aliquam eos eveniet facere sed amet porro soluta beatae
+                  pariatur quo fugit quidem labore eius sit quod ducimus ratione
+                  dolorum expedita. Molestiae labore autem dolor dolore aperiam
+                  incidunt mollitia.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque quod obcaecati dolorum sed culpa reiciendis facere rem,
+                  sapiente, aperiam minus illo. Amet, vel? Quia aspernatur
+                  deserunt beatae ab assumenda expedita illum, enim quos et
+                  voluptatum!
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Corrupti vel debitis impedit reprehenderit ipsum, eum mollitia
+                  nisi, at deleniti totam fugit dicta ipsa explicabo minima
+                  animi iusto nihil hic deserunt unde quibusdam repellat in!
+                  Magni, reiciendis! Consequuntur quam ex incidunt rem deleniti
+                  corporis similique ut.
+                </dd>
+                <dt class="movie-name">Sample Movie</dt>
+                <dd class="movie-story">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  amet laboriosam corrupti blanditiis unde quasi aliquam nisi ea
+                  cumque expedita incidunt quia officia illo molestiae,
+                  voluptatibus optio commodi odio earum. Voluptas, esse saepe
+                  aperiam, ullam repudiandae expedita natus explicabo, itaque
+                  ducimus nihil laboriosam quasi tempora hic placeat ipsum rerum
+                  ratione dignissimos! Temporibus dolores maiores voluptatum
+                  quis, beatae sapiente ipsa harum.
+                </dd>
+              </dl>
             </div>
-        </section>
-    </main>
-    <aside>
+          </section>
+        </div>
+      </main>
+      <aside>
         <div class="social-icons">
-            <span class="social-icon"><img src="./img/twitter.svg" alt="twitter logo"></span>
-            <span class="social-icon"><img src="./img/instagram.svg" alt="instagram logo"></span>
-            <span class="social-icon"><img src="./img/youtube.svg" alt="youtube logo"></span>
-            <span class="social-icon"><img src="./img/google-plus-g.svg" alt="google plus logo"></span>
+          <span class="social-icon"
+            ><img src="../img/twitter.svg" alt="twitter logo"
+          /></span>
+          <span class="social-icon"
+            ><img src="../img/instagram.svg" alt="instagram logo"
+          /></span>
+          <span class="social-icon"
+            ><img src="../img/youtube.svg" alt="youtube logo"
+          /></span>
+          <span class="social-icon"
+            ><img src="../img/google-plus-g.svg" alt="google plus logo"
+          /></span>
         </div>
-    </aside>
-    <div class="progress-bar"></div>
-    <footer><small>Tüm Hakları Saklıdır &copy; <span id="year"></span></small></footer>
+      </aside>
+      <div class="progress-bar"></div>
+      <footer>
+        <small>Tüm Hakları Saklıdır &copy; <span id="year"></span></small>
+      </footer>
+    </div>
 
-    <script src="./js/movies.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            const headeroff = $("header").offset().top;
-            $("header").wrap("<div class='header-placeholder'></div>");
-            $(".header-placeholder").height($("header").outerHeight());
-            $(window).scroll(function() {
-                let winPos = $(this).scrollTop();
-                if (winPos > headeroff) {
-                    $("header").addClass("fixed");
-                } else {
-                    $("header").removeClass("fixed")
-                }
-            });
+    <script src="./shared-scripts/utils.min.js"></script>
 
-            $(".content-list a").on("click", function(event) {
-                event.preventDefault();
-                const hash = this.hash;
+    <script src="./shared-scripts/header.min.js"></script>
 
-                if (hash !== "") {
-                    $("html, body").animate({
-                        scrollTop: $(hash).offset().top - $("header").outerHeight()
-                    }, 1300);
-                }
-            });
-            $(window).scroll(function() {
-                const pageEnd = $("footer").offset().top + $("footer").outerHeight();
-                const winPosBottom = $(this).scrollTop() + $(this).height();
-                const width = Math.ceil((winPosBottom / pageEnd) * 100);
-                if (width > 98 || width < 20) {
-                    $(".progress-bar").fadeOut(500);
-                } else {
-                    $(".progress-bar").fadeIn(500);
-                    $(".progress-bar").css("width", width + "%");
-                }
-            });
-        });
-    </script>
+    <script src="index.min.js"></script>
 
-</body>
-
+  </body>
 </html>
