@@ -36,8 +36,10 @@ function html() {
         src: null,
         tpl: '<link rel= "stylesheet" href="./%f.min.css" />'
       },
-      headerjs: "./shared-scripts/header.min.js",
-      utilsjs: "./shared-scripts/utils.min.js"
+      footerYearjs: "../shared-scripts/footerYear.min.js",
+      toTopBtnjs: "../shared-scripts/toTopBtn.min.js",
+      headerjs: "../shared-scripts/header.min.js",
+      utilsjs: "../shared-scripts/utils.min.js"
     }))
     .pipe(dest("dist/"))
 }

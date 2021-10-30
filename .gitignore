@@ -6,3 +6,5 @@ src-codes
 src
 *.log
 test.js
+maps
+*.map.*
