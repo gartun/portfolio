@@ -23,6 +23,10 @@ function clean() {
   return del("dist/");
 }
 
+function cleanMaps() {
+  return del("dist/maps");
+}
+
 function html() {
   const source = "src/**/*.html";
 
@@ -116,5 +120,5 @@ function bSync() {
 // Tasks to define the execution of the functions simultaneously or in series
 
 exports.watch = parallel(watchFiles, bSync);
-exports.default = series(clean, parallel(html, js, css, img));
+exports.default = series(clean, parallel(html, js, css, img), cleanMaps);
     
