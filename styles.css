@@ -53,7 +53,6 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *,
 *::before,
 *::after {
@@ -402,6 +401,11 @@ footer {
 }
 .source-code:hover {
   background-color: #cfcf23;
+}
+@media (max-width: 800px) {
+  .source-code {
+    display: none;
+  }
 }
 
 #contact-section {

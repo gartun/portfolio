@@ -22,5 +22,8 @@
   "devDependencies": {
     "eslint": "^7.25.0",
     "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "sass": "^1.52.2"
   }
 }

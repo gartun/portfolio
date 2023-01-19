@@ -116,7 +116,7 @@ footer {
   flex: 0 0 300px;
   overflow: hidden;
 
-  @include mq(800px) {
+  @include mq($break-point) {
     margin: 0.9em;
     padding: 1em 0 0 0.2em;
     height: 250px;
@@ -127,37 +127,37 @@ footer {
   }
 
   &:nth-child(1) {
-    @include mq(800px) {
+    @include mq($break-point) {
       @include bg("./img/fmentor.PNG");
     }
   }
 
   &:nth-child(2) {
-    @include mq(800px) {
+    @include mq($break-point) {
       @include bg("./img/ÖC.PNG");
     }
   }
 
   &:nth-child(3) {
-    @include mq(800px) {
+    @include mq($break-point) {
       @include bg("./img/KY.PNG");
     }
   }
 
   &:nth-child(4) {
-    @include mq(800px) {
+    @include mq($break-point) {
       @include bg("./img/BV.PNG");
     }
   }
 
   &:nth-child(5) {
-    @include mq(800px) {
+    @include mq($break-point) {
       @include bg("./img/WS.PNG");
     }
   }
 
   &:nth-child(6) {
-    @include mq(800px) {
+    @include mq($break-point) {
       @include bg("./img/FEB.jpg");
     }
   }
@@ -176,6 +176,10 @@ footer {
 
   &:hover {
     background-color: $primary-yellow;
+  }
+
+  @media (max-width: $break-point) {
+    display: none;
   }
 }
 

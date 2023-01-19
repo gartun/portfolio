@@ -1,21 +1,27 @@
 window.onload = function () {
+  /* UTIL FUNCS starts */
+  function convertToArrayFrom(selector) {
+    return [].slice.call(document.querySelectorAll(selector));
+  }
 
-  var tabLinks = [].slice.call(document.querySelectorAll("button[role='tab']"));
-  var isSpaceOrEnter = function (e) {
+  var isEitherSpaceOrEnter = function (e) {
     return e.keyCode === 32 || e.keyCode === 13;
   };
+  /* UTIL FUNCS end */
+
+  var tabLinks = convertToArrayFrom("button[role='tab']");
 
   tabLinks.forEach(function (tb) {
-    tb.addEventListener("click", function (e) {
-      shouldUpdate(e, this);
+    tb.addEventListener("click", function () {
+      shouldUpdate(this);
     });
 
-    tb.addEventListener("keypress", function (e) {
-      if (isSpaceOrEnter(e.keyCode)) shouldUpdate(e, this);
+    tb.addEventListener("keypress", function () {
+      if (isEitherSpaceOrEnter(e.keyCode)) shouldUpdate(this);
     });
   });
 
-  function shouldUpdate(eve, tb) {
+  function shouldUpdate(tb) {
     var isSelected = tb.getAttribute("aria-selected");
     // if already selected then no need to update ui.
     if (isSelected === "true") return;
@@ -41,13 +47,12 @@ window.onload = function () {
   function showPanel(id) {
     var panel = document.getElementById(id);
 
-    var otherPanels = [].slice
-      .call(document.querySelectorAll("[role='tabpanel']"))
+    var otherPanels = convertToArrayFrom("[role='tabpanel']")
       .filter(function (pnl) {
         return pnl !== panel
       });
 
-    otherPanels.forEach(function(pnl) {
+    otherPanels.forEach(function (pnl) {
       pnl.setAttribute("aria-hidden", "true");
     });
 
@@ -55,6 +60,6 @@ window.onload = function () {
   }
 
   var fYear = document.getElementById("footer-year"),
-      curYear = new Date().getFullYear();
+    curYear = new Date().getFullYear();
   fYear.innerText = 2020 === curYear ? "2020" : "2020-" + curYear;
 };
